@@ -23,5 +23,6 @@
     zip
     unzip
     wl-clipboard
+    gparted
   ];
 }
