@@ -1,0 +1,3 @@
+[submodule "users/dkrasiev-base/modules/dotfiles/dotfiles"]
+	path = users/dkrasiev-base/modules/dotfiles/dotfiles
+	url = https://github.com/dkrasiev/dotfiles
