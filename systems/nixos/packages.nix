@@ -23,6 +23,7 @@
     zip
     unzip
     wl-clipboard
-    gparted
+    partition-manager
+    mpv
   ];
 }
