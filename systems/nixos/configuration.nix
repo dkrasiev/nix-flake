@@ -21,6 +21,7 @@
     # ./modules/xserver.nix
     # ./modules/gnome.nix
     ./modules/plasma.nix
+    ./modules/hyprland.nix
   ];
 
   networking.hostName = "nixos"; # Define your hostname.
