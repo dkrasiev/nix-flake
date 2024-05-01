@@ -2,6 +2,7 @@
 
 {
   programs.hyprland.enable = true;
+  # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprland.xwayland.enable = true;
 
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -14,6 +15,7 @@
     # bar
     waybar
     # notification
+    dunst
     mako
     # wallpaper
     swww
