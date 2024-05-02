@@ -5,6 +5,6 @@
     ./modules/git.nix
   ];
   
-  home.username = "dkrasiev-df";
-  home.homeDirectory = "/home/dkrasiev-df";
+  home.username = "dkrasiev-work";
+  home.homeDirectory = "/home/dkrasiev-work";
 }
