@@ -9,5 +9,6 @@ in
     ".config/nvim".source = mkSource "dotfiles/nvim/.config/nvim";
     ".config/kitty".source = mkSource "dotfiles/kitty/.config/kitty";
     ".config/tmux".source = mkSource "dotfiles/tmux/.config/tmux";
+    ".config/tmuxinator".source = mkSource "dotfiles/tmuxinator/.config/tmuxinator";
   };
 }

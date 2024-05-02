@@ -1,10 +1,11 @@
 {
   imports = [
     ./modules/dotfiles/configuration.nix
-    ./modules/fish.nix
-    ./modules/home-manager.nix
     ./modules/packages.nix
     ./modules/variables.nix
+    ./modules/home-manager.nix
+    ./modules/fish.nix
+    # ./modules/tmux.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -18,5 +20,6 @@
   home.sessionVariables = {
     VISUAL = "nvim";
     EDITOR = "nvim";
+    FLAKE = "${config.home.homeDirectory}/nix";
   };
 }
