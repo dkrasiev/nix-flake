@@ -1,5 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, settings, ... }:
 
+with settings.user;
 {
   imports = [
     ../dkrasiev-base/configuration.nix
@@ -7,6 +8,6 @@
     ./modules/git.nix
   ];
   
-  home.username = "dkrasiev";
-  home.homeDirectory = "/home/dkrasiev";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
 }
