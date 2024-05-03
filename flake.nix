@@ -7,6 +7,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    dotfiles.url = "github:dkrasiev/dotfiles/master";
+    dotfiles.flake = false;
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -24,6 +27,7 @@
     
     mkUser = { profile }: home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = { inherit (inputs) dotfiles; };
       modules = [
         ./users/${profile}/home.nix
       ];

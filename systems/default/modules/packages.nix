@@ -5,31 +5,21 @@
 
   environment.systemPackages = with pkgs; [
     git
-    google-chrome
-    telegram-desktop
-    stow
-    home-manager
-    kitty
-    nerdfonts
-    fish
-    tmux
-    tmuxinator
-    neovim
     gcc
-    ripgrep
-    lazygit
+    fish
+    kitty
+    tmux tmuxinator
+    neovim
+    nerdfonts ripgrep lazygit
     nodejs
-    zip
-    unzip
+    zip unzip
     wl-clipboard
     partition-manager
     mpv
-    fnm
-    nh
-    nurl
+    home-manager nh nurl
     libreoffice-qt
-    postman
-    dbeaver
-    burpsuite
+    postman dbeaver burpsuite
+    google-chrome
+    telegram-desktop
   ];
 }

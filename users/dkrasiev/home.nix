@@ -1,11 +1,9 @@
 {
   imports = [
     ./modules/dotfiles/configuration.nix
+    ./modules/programs/configuration.nix
     ./modules/packages.nix
     ./modules/variables.nix
-    ./modules/home-manager.nix
-    ./modules/fish.nix
-    # ./modules/tmux.nix
   ];
 
   home.username = "dkrasiev";
