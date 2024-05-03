@@ -4,6 +4,7 @@
     ./modules/programs/configuration.nix
     ./modules/packages.nix
     ./modules/variables.nix
+    ./modules/plasma.nix
   ];
 
   home.username = "dkrasiev";
