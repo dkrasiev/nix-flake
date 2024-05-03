@@ -1,13 +1,15 @@
-{ config, pkgs, settings, ... }:
-
-with settings.user;
 {
   imports = [
-    ../dkrasiev-base/configuration.nix
-
-    ./modules/git.nix
+    ./modules/dotfiles/configuration.nix
+    ./modules/packages.nix
+    ./modules/variables.nix
+    ./modules/home-manager.nix
+    ./modules/fish.nix
+    # ./modules/tmux.nix
   ];
-  
-  home.username = username;
-  home.homeDirectory = "/home/${username}";
+
+  home.username = "dkrasiev";
+  home.homeDirectory = "/home/dkrasiev";
+
+  home.stateVersion = "23.11"; # Please read the comment before changing.
 }
