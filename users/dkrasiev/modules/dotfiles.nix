@@ -14,7 +14,7 @@ in
   xdg.configFile = {
     "nvim".source = mkDotfileSource "nvim";
     "kitty".source = mkDotfileSource "kitty";
-    "tmux".source = mkDotfileSource "tmux";
+    "tmux" = { source = mkDotfileSource "tmux"; recursive = true; };
     "tmux/plugins/tpm".source = tpm;
     "tmuxinator".source = mkDotfileSource "tmuxinator";
   };
