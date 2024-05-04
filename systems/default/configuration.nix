@@ -1,7 +1,7 @@
 {
   imports = [
-    ./modules/services/configuration.nix
-    ./modules/programs/configuration.nix
+    ./modules/services
+    ./modules/programs
 
     ./modules/packages.nix
     ./modules/bootloader.nix
@@ -12,11 +12,11 @@
     ./modules/sound.nix
     ./modules/zram-swap.nix
 
-    # ./modules/managers/gdm.nix
-    # ./modules/managers/gnome.nix
-    ./modules/managers/sddm.nix
-    ./modules/managers/plasma6.nix
-    ./modules/managers/hyprland.nix
+    # ./managers/gdm.nix
+    # ./managers/gnome.nix
+    ./managers/sddm.nix
+    ./managers/plasma6.nix
+    ./managers/hyprland.nix
   ];
 
   # Set your time zone.

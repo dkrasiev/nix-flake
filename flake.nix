@@ -31,7 +31,7 @@
     
     mkUser = { profile }: home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      extraSpecialArgs = { inherit (inputs) dotfiles; };
+      extraSpecialArgs = { inherit inputs; };
       modules = [
         plasma-manager.homeManagerModules.plasma-manager
       

@@ -1,10 +1,11 @@
 {
   imports = [
-    ./modules/dotfiles/configuration.nix
-    ./modules/programs/configuration.nix
+    ./modules/programs
+    ./modules/dotfiles.nix
     ./modules/packages.nix
     ./modules/variables.nix
     ./modules/plasma.nix
+    ./modules/qt.nix
   ];
 
   home.username = "dkrasiev";
