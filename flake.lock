@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1714657658,
-        "narHash": "sha256-sXBiCcEAjVQzGPWsIA572XKThr/z4onNc/4DbRQ2WIk=",
+        "lastModified": 1714859262,
+        "narHash": "sha256-bmvrM3VYkNZuPpkWJ5PGj4gSp2pw5nW1bNivv2NdsuI=",
         "owner": "dkrasiev",
         "repo": "dotfiles",
-        "rev": "b4042d28bf51d9c22adc5aac7e5a4fa2495a9d3c",
+        "rev": "b4c2dbb826ee8b27977a6377fe6206241926903d",
         "type": "github"
       },
       "original": {
@@ -79,11 +79,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714563800,
-        "narHash": "sha256-6G6/28zu3SxHgGGbN9IeVOcGidTt5dUdQbZEI39goEM=",
+        "lastModified": 1714856962,
+        "narHash": "sha256-2te5GG8TVNBF44uMF4G0XFGW+Jt02i/ZkspSNFzjgT0=",
         "owner": "pjones",
         "repo": "plasma-manager",
-        "rev": "4b56c71c9cdb9728316cbb5dd99446b31c585913",
+        "rev": "1554e19ede17de46106dd95820eeea05086a5720",
         "type": "github"
       },
       "original": {
