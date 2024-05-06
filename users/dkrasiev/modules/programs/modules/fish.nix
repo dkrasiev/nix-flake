@@ -8,9 +8,12 @@
     { name = "done"; src = pkgs.fishPlugins.done.src; }
   ];
 
-  # programs.fish.shellAliases = {
-  #   "node14" = "nix develop ~/nix#node14 --command fish";
-  # };
+  programs.fish.shellAliases = {
+    "emias-shell" = "nix develop ~/nix#emias --command fish";
+    "nixos-update" = "nix flake update ~/nix";
+    "nixos-switch" = "nh os switch";
+    "nixos-boot" = "nh os boot";
+  };
 
   programs.fish.interactiveShellInit = ''
     set --universal pure_enable_single_line_prompt true
