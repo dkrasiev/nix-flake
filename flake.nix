@@ -49,6 +49,7 @@
   {
     nixosConfigurations = {
       matebook = mkSystem { profile = "matebook"; };
+      b550mpro = mkSystem { profile = "b550mpro"; };
       nixos-work = mkSystem { profile = "nixos-work"; };
     };
 
