@@ -21,7 +21,6 @@
     system = "x86_64-linux";
 
     pkgs = import nixpkgs { inherit system; };
-    pkgs-20-09 = import inputs.nixpkgs-20-09 { inherit system; };
 
     mkSystem = { profile, hostname ? profile, modules ? [] }: nixpkgs.lib.nixosSystem {
       inherit system;
@@ -29,7 +28,7 @@
       modules = [ ./systems/${profile}/configuration.nix ] ++ modules;
     };
     
-    mkUser = { profile, username ? profile}: home-manager.lib.homeManagerConfiguration {
+    mkUser = { profile, username ? profile }: home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
       modules = [
@@ -61,7 +60,7 @@
     devShells.${system} = {
       emias = mkShell {
         profile = "emias";
-        inputs = { inherit pkgs pkgs-20-09; };
+        inputs = { inherit pkgs system; };
       };
     };
   };
