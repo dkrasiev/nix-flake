@@ -36,5 +36,6 @@
     google-chrome firefox
     telegram-desktop
     gimp
+    obsidian
   ];
 }
