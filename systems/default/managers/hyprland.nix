@@ -13,11 +13,19 @@
   environment.systemPackages = with pkgs; [
     # bar
     waybar
-    # notification
+    # notification daemon
     mako
-    # wallpaper
+    # wallpaper daemon
     swww
     # task runner
     wofi
+
+    networkmanagerapplet
+
+    wlogout
+    swaylock
+    swaylock-effects
   ];
+
+  security.pam.services.swaylock = {};
 }

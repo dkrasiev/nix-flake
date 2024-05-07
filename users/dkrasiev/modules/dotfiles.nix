@@ -17,5 +17,6 @@ in
     "tmux" = { source = mkDotfileSource "tmux"; recursive = true; };
     "tmux/plugins/tpm".source = tpm;
     "tmuxinator".source = mkDotfileSource "tmuxinator";
+    "hypr".source = mkDotfileSource "hypr";
   };
 }
