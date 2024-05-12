@@ -37,7 +37,7 @@
         ./users/${profile}/home.nix
 
         {
-          home.username = profile;
+          home.username = username;
           home.homeDirectory = "/home/${username}";
         }
       ];
