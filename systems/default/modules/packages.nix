@@ -37,5 +37,6 @@
     telegram-desktop
     gimp
     obsidian
+    vscode
   ];
 }
