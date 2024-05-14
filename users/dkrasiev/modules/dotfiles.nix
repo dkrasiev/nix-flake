@@ -11,12 +11,16 @@ let
   };
 in
 {
-  xdg.configFile = {
-    "nvim".source = mkDotfileSource "nvim";
-    "kitty".source = mkDotfileSource "kitty";
-    "tmux" = { source = mkDotfileSource "tmux"; recursive = true; };
-    "tmux/plugins/tpm".source = tpm;
-    "tmuxinator".source = mkDotfileSource "tmuxinator";
-    "hypr".source = mkDotfileSource "hypr";
+  home.file = {
+    ".config/kitty".source = mkDotfileSource "kitty";
+
+    ".config/tmux" = { source = mkDotfileSource "tmux"; recursive = true; };
+    ".config/tmux/plugins/tpm".source = tpm;
+    ".config/tmuxinator".source = mkDotfileSource "tmuxinator";
+
+    ".config/nvim".source = mkDotfileSource "nvim";
+    ".config/nvchad".source = "${inputs.dotfiles}/nvim-nvchad/.config/nvim";
+
+    ".config/hypr".source = mkDotfileSource "hypr";
   };
 }
