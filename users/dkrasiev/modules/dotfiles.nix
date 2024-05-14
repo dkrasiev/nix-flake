@@ -19,7 +19,6 @@ in
     ".config/tmuxinator".source = mkDotfileSource "tmuxinator";
 
     ".config/nvim".source = mkDotfileSource "nvim";
-    ".config/nvchad".source = "${inputs.dotfiles}/nvim-nvchad/.config/nvim";
 
     ".config/hypr".source = mkDotfileSource "hypr";
   };
