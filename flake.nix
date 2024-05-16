@@ -62,6 +62,10 @@
         profile = "emias";
         inputs = { inherit pkgs system; };
       };
+      prisma = mkShell {
+        profile = "prisma";
+        inputs = { inherit pkgs system; };
+      };
     };
   };
 }
