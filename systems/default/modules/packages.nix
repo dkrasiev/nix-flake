@@ -38,5 +38,7 @@
     gimp
     obsidian
     vscode
+    stow
+    easyeffects
   ];
 }
