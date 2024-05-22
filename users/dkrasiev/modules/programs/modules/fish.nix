@@ -19,5 +19,6 @@
 
     "nvchad" = "NVIM_APPNAME=nvchad nvim";
     "lazyvim" = "NVIM_APPNAME=lazyvim nvim";
+    "v" = "nvim";
   };
 }

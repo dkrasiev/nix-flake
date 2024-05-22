@@ -18,7 +18,7 @@ in
     ".config/tmux/plugins/tpm".source = tpm;
     ".config/tmuxinator".source = mkDotfileSource "tmuxinator";
 
-    ".config/nvim".source = mkDotfileSource "nvim";
+    # ".config/nvim".source = mkDotfileSource "nvim";
 
     ".config/hypr".source = mkDotfileSource "hypr";
   };
