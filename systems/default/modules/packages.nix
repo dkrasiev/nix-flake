@@ -8,16 +8,14 @@
     git gh
     # dep for treesiter and many
     gcc
-    # main shell
-    fish
     # main terminal
     kitty
     # main editor
     tmux tmuxinator
     # main editor
     neovim
-    # AstroNvim deps
-    nerdfonts ripgrep lazygit
+    # nvim and etc
+    nerdfonts ripgrep lazygit fzf
     # archives
     zip unzip
     # wayland clipboard
