@@ -25,7 +25,7 @@
     # media
     mpv
     # nixos
-    home-manager nh nurl
+    nh nurl
     # office suite
     libreoffice-qt
     # dev
