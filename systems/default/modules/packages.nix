@@ -40,5 +40,6 @@
     easyeffects
     qbittorrent
     obs-studio
+    oh-my-posh
   ];
 }
