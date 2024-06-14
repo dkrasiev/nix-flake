@@ -1,12 +1,16 @@
 {
   imports = [
-    ./base-configuration.nix
+    ./modules/packages
+    ./modules/programs
+    ./modules/services
 
-    # ./managers/gdm.nix
-    # ./managers/gnome.nix
-    ./managers/sddm.nix
-    # ./managers/plasma6.nix
-    ./managers/hyprland.nix
+    ./modules/bootloader.nix
+    ./modules/nix.nix
+    ./modules/users.nix
+    ./modules/bluetooth.nix
+    ./modules/networking.nix
+    ./modules/sound.nix
+    ./modules/zram-swap.nix
   ];
 
   # Set your time zone.
