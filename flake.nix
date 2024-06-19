@@ -2,7 +2,7 @@
   description = "dkrasiev's flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
   };
 
   outputs = { nixpkgs, ... }@inputs:
