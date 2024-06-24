@@ -33,6 +33,6 @@
     # nixos
     nh nurl
     # search
-    ripgrep fzf
+    ripgrep fzf zoxide
   ];
 }
