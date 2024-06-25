@@ -21,9 +21,8 @@
     gimp
     obsidian
     stow
-    easyeffects
     qbittorrent
-    obs-studio
+    obs-studio easyeffects droidcam
 
     ### CLI UTILS
     # archives
