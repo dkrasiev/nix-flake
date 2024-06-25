@@ -22,7 +22,7 @@
     obsidian
     stow
     qbittorrent
-    obs-studio easyeffects droidcam
+    obs-studio easyeffects
 
     ### CLI UTILS
     # archives
