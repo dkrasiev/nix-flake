@@ -19,6 +19,7 @@
 
     telegram-desktop
     gimp
+    kdenlive
     obsidian
     stow
     qbittorrent
