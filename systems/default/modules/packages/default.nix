@@ -17,6 +17,7 @@
     # browsers
     google-chrome firefox
 
+    thunderbird
     telegram-desktop
     gimp
     kdenlive
