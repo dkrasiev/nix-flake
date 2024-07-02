@@ -40,5 +40,6 @@
     vscode
     stow
     easyeffects
+    qbittorrent
   ];
 }
