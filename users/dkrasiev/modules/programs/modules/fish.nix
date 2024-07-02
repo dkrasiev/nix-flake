@@ -16,9 +16,8 @@
     "nixos-switch" = "nh os switch";
     "nixos-boot" = "nh os boot";
     "home-switch" = "nh home switch";
-  };
 
-  programs.fish.interactiveShellInit = ''
-    set --universal pure_enable_single_line_prompt true
-  '';
+    "nvchad" = "NVIM_APPNAME=nvchad nvim";
+    "lazynvim" = "NVIM_APPNAME=lazynvim nvim";
+  };
 }
