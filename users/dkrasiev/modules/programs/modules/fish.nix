@@ -18,6 +18,6 @@
     "home-switch" = "nh home switch";
 
     "nvchad" = "NVIM_APPNAME=nvchad nvim";
-    "lazynvim" = "NVIM_APPNAME=lazynvim nvim";
+    "lazyvim" = "NVIM_APPNAME=lazyvim nvim";
   };
 }
