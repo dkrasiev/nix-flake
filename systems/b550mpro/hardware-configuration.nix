@@ -18,7 +18,6 @@ in
   # pc with 7800 xt not booting with default value
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = [ ];
-  boot.loader.grub.device = bootPartition;
 
   fileSystems."/" =
     { device = rootPartition;
