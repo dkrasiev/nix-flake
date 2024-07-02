@@ -54,7 +54,6 @@
 
     homeConfigurations = {
       dkrasiev = mkUser { profile = "dkrasiev"; };
-      dkrasiev-work = mkUser { profile = "dkrasiev-work"; };
     };
 
     devShells.${system} = {
