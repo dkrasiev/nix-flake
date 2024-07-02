@@ -29,13 +29,18 @@
       modules = [ ./systems/${profile}/configuration.nix ] ++ modules;
     };
     
-    mkUser = { profile }: home-manager.lib.homeManagerConfiguration {
+    mkUser = { profile, username ? profile}: home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
       modules = [
         plasma-manager.homeManagerModules.plasma-manager
       
         ./users/${profile}/home.nix
+
+        {
+          home.username = profile;
+          home.homeDirectory = "/home/${username}";
+        }
       ];
     };
     
@@ -44,6 +49,7 @@
   {
     nixosConfigurations = {
       matebook = mkSystem { profile = "matebook"; };
+      nixos-work = mkSystem { profile = "nixos-work"; };
     };
 
     homeConfigurations = {

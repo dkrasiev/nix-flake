@@ -1,10 +1,9 @@
+{ lib, ... }:
+
 {
   imports = [
     ../dkrasiev/home.nix
   ];
   
-  home.username = "dkrasiev-work";
-  home.homeDirectory = "/home/dkrasiev-work";
-
-  programs.git.userEmail = "dkrasiev@datafire.ru";
+  programs.git.userEmail = lib.mkForce "dkrasiev@datafire.ru";
 }
