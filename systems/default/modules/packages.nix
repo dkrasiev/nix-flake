@@ -23,7 +23,7 @@
     # wayland clipboard
     wl-clipboard
     # disk management
-    partition-manager
+    filelight partition-manager
     # media
     mpv
     # nixos
@@ -31,7 +31,7 @@
     # office suite
     libreoffice-qt
     # dev
-    python3 nodejs postman insomnia dbeaver burpsuite soapui
+    python3 postman insomnia dbeaver burpsuite soapui
     # browserns
     google-chrome firefox
     telegram-desktop

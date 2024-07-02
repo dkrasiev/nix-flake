@@ -7,15 +7,15 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    plasma-manager.url = "github:pjones/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "home-manager";
+    # plasma-manager.url = "github:pjones/plasma-manager";
+    # plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # plasma-manager.inputs.home-manager.follows = "home-manager";
 
     dotfiles.url = "github:dkrasiev/dotfiles/master";
     dotfiles.flake = false;
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
 
@@ -31,7 +31,7 @@
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
       modules = [
-        plasma-manager.homeManagerModules.plasma-manager
+        # inputs.plasma-manager.homeManagerModules.plasma-manager
       
         ./users/${profile}/home.nix
 
@@ -53,7 +53,6 @@
 
     homeConfigurations = {
       dkrasiev = mkUser { profile = "dkrasiev"; };
-      dkrasiev-work = mkUser { profile = "dkrasiev"; username = "dkrasiev-work"; };
     };
 
     devShells.${system} = {

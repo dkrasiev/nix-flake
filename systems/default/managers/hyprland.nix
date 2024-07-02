@@ -16,7 +16,8 @@
     # notification daemon
     mako
     # wallpaper daemon
-    swww
+    # swww
+    hyprpaper
     # task runner
     wofi
 
