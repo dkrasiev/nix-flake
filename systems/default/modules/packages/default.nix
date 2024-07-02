@@ -5,6 +5,7 @@
 
   imports = [
     ./modules/dev.nix
+    ./modules/k8s.nix
   ];
 
   environment.systemPackages = with pkgs; [
