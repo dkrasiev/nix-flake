@@ -14,7 +14,7 @@
       packages = with pkgs; [];
     };
 
-    users.dkrasiev-df = {
+    users.dkrasiev-work = {
       isNormalUser = true;
       description = "Dmitry Krasiev's work account";
       extraGroups = [ "networkmanager" "wheel" "docker" ];

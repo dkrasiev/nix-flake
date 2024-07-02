@@ -29,6 +29,7 @@
     nurl
     libreoffice-qt
     postman
-    maven
+    dbeaver
+    burpsuite
   ];
 }
