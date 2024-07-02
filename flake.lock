@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1715958500,
-        "narHash": "sha256-017FNPLuM2DpX2MFqarx1v3uaa5O6HBuWBC2xkEwhiE=",
+        "lastModified": 1716196164,
+        "narHash": "sha256-Snok/vhX2Z6MFn/MXoNOkb2GtAm1vJ7s6+7741D0B3Q=",
         "owner": "dkrasiev",
         "repo": "dotfiles",
-        "rev": "faab18d9ad69d9e9d54a2bbcc14c71f50de00ae0",
+        "rev": "8a988c69274bafd6ee93fa24c8017112870d5688",
         "type": "github"
       },
       "original": {
@@ -39,32 +39,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1715787315,
-        "narHash": "sha256-cYApT0NXJfqBkKcci7D9Kr4CBYZKOQKDYA23q8XNuWg=",
+        "lastModified": 1716137900,
+        "narHash": "sha256-sowPU+tLQv8GlqtVtsXioTKeaQvlMz/pefcdwg8MvfM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "33d1e753c82ffc557b4a585c77de43d4c922ebb5",
+        "rev": "6c0b7a92c30122196a761b440ac0d46d3d9954f1",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-20-09": {
-      "locked": {
-        "lastModified": 1635350005,
-        "narHash": "sha256-tAMJnUwfaDEB2aa31jGcu7R7bzGELM9noc91L2PbVjg=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "1c1f5649bb9c1b0d98637c8c365228f57126f361",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-20.09",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -79,11 +63,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714856962,
-        "narHash": "sha256-2te5GG8TVNBF44uMF4G0XFGW+Jt02i/ZkspSNFzjgT0=",
+        "lastModified": 1716145823,
+        "narHash": "sha256-S2cfXdWCRf6Z+Gas6GN1kMSYqG01583uuJKITDVQp0o=",
         "owner": "pjones",
         "repo": "plasma-manager",
-        "rev": "1554e19ede17de46106dd95820eeea05086a5720",
+        "rev": "5db76cbb4d66231769cd8939472ae00c55c24a44",
         "type": "github"
       },
       "original": {
@@ -97,7 +81,6 @@
         "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-20-09": "nixpkgs-20-09",
         "plasma-manager": "plasma-manager"
       }
     }

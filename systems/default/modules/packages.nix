@@ -31,8 +31,8 @@
     # office suite
     libreoffice-qt
     # dev
-    python3 nodejs postman dbeaver burpsuite
-    # browsers
+    python3 nodejs postman insomnia dbeaver burpsuite soapui
+    # browserns
     google-chrome firefox
     telegram-desktop
     gimp
@@ -41,5 +41,6 @@
     stow
     easyeffects
     qbittorrent
+    obs-studio
   ];
 }
