@@ -6,10 +6,10 @@
     git lazygit gh
 
     # compilers
-    gcc rustc
+    gnumake cmake gcc rustc
 
     # package managers / languages
-    cargo luarocks nodejs python3
+    cargo luarocks nodejs python3 maven
 
     # terminal
     kitty nerdfonts 
