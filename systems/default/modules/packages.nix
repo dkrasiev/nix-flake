@@ -29,7 +29,7 @@
     # office suite
     libreoffice-qt
     # dev
-    python3 postman insomnia dbeaver burpsuite soapui
+    python3 postman insomnia dbeaver-bin burpsuite soapui
     # browserns
     google-chrome firefox
     telegram-desktop
