@@ -1,9 +1,9 @@
 {
   imports = [
-    ./modules/services
+    ./modules/packages
     ./modules/programs
+    ./modules/services
 
-    ./modules/packages.nix
     ./modules/bootloader.nix
     ./modules/nix.nix
     ./modules/users.nix
