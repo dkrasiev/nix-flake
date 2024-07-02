@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     git
@@ -15,6 +13,7 @@
     nerdfonts
     fish
     tmux
+    tmuxinator
     neovim
     gcc
     ripgrep
@@ -25,5 +24,11 @@
     wl-clipboard
     partition-manager
     mpv
+    fnm
+    nh
+    nurl
+    libreoffice-qt
+    postman
+    maven
   ];
 }

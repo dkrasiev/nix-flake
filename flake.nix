@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-old.url = "github:nixos/nixpkgs/62fab0d98ae9f62c41832ec2986bb7d8622786a0";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,6 +15,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-old = inputs.nixpkgs-old.legacyPackages.${system};
     in
     {
       nixosConfigurations = {
@@ -35,9 +37,18 @@
         };
       };
 
-      devShells.${system} = {
-        node14 = (import ./shells/node14.nix { inherit pkgs; });
-        nodelts = (import ./shells/nodelts.nix { inherit pkgs; });
+      devShells.${system} =
+      let
+        node14shell = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            pkgs-old.nodejs-14_x
+          ];
+        };
+      in
+      {
+        default = node14shell;
+        node14 = node14shell;
+        java8 = (import ./shells/java8.nix { inherit pkgs; });
       };
     };
 }

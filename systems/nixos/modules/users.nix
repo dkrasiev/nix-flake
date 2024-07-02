@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  # required by users.defaultUserShell
   programs.fish.enable = true;
 
   users = {
@@ -16,7 +17,7 @@
     users.dkrasiev-df = {
       isNormalUser = true;
       description = "Dmitry Krasiev's work account";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
       packages = with pkgs; [];
     };
   };
