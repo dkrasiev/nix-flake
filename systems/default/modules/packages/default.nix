@@ -29,7 +29,7 @@
 
     ### CLI UTILS
     # archives
-    zip unzip rar
+    zip unzip rar p7zip
     # wayland clipboard
     wl-clipboard
     # nixos
