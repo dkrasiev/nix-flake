@@ -3,7 +3,7 @@
     dkrasiev = {
       isNormalUser = true;
       description = "Dmitry Krasiev";
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     };
   };
 }
