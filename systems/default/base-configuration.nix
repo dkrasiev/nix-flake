@@ -3,6 +3,7 @@
     ./modules/packages
     ./modules/programs
     ./modules/services
+    ./modules/virtualisation
 
     ./modules/bootloader.nix
     ./modules/nix.nix
