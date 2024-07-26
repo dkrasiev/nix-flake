@@ -29,5 +29,6 @@
     dbeaver-bin
     burpsuite
     soapui
+    charles
   ];
 }
