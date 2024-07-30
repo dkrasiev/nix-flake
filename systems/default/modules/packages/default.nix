@@ -26,7 +26,7 @@
     stow
     qbittorrent
     obs-studio easyeffects
-    remmina
+    remmina krdc
     gnome.gnome-boxes
 
     ### CLI UTILS
