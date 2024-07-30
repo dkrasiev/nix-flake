@@ -1,9 +1,7 @@
 { hostname, ... }:
 
 {
-  networking = {
-    hostName = hostname;
-    networkmanager.enable = true;
-    firewall.enable = false;
-  };
+  networking.hostName = hostname;
+  networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
 }
