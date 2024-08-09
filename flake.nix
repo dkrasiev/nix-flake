@@ -3,9 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
-  outputs = { nixpkgs, ... }:
+  outputs = { nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
 
@@ -14,7 +15,14 @@
     mkSystem = { profile, hostname ? profile, modules ? [] }: nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit hostname; };
-      modules = [ ./systems/${profile}/configuration.nix ] ++ modules;
+      modules = [
+        ./systems/${profile}/configuration.nix
+
+        inputs.vscode-server.nixosModules.default
+        ({ config, pkgs, ... }: {
+            services.vscode-server.enable = true;
+        })
+      ] ++ modules;
     };
     
     mkShell = { profile, inputs }: import ./shells/${profile}.nix inputs;
