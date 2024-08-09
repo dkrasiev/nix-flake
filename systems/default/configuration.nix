@@ -2,11 +2,11 @@
   imports = [
     ./base-configuration.nix
 
-    # ./managers/gdm.nix
-    # ./managers/gnome.nix
-    ./managers/sddm.nix
-    ./managers/plasma6.nix
-    # ./managers/hyprland.nix
+    # ../../managers/gdm.nix
+    # ../../managers/gnome.nix
+    ../../managers/sddm.nix
+    ../../managers/plasma6.nix
+    # ../../managers/hyprland.nix
   ];
 
   # Set your time zone.

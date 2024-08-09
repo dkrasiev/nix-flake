@@ -9,10 +9,19 @@
     gnumake cmake gcc rustc
 
     # package managers / languages
-    cargo luarocks nodejs python3 maven
+    # rust
+    cargo
+    # lua
+    luarocks
+    # javascript
+    nodejs
+    # python
+    python3
+    # java
+    maven jre
 
     # terminal
-    kitty nerdfonts 
+    kitty nerdfonts
 
     # tmux
     tmux tmuxinator
