@@ -12,9 +12,9 @@
 
     pkgs = import nixpkgs { inherit system; };
 
-    mkSystem = { profile, hostname ? profile, modules ? [] }: nixpkgs.lib.nixosSystem {
+    mkSystem = { profile, hostname ? profile, user ? { name = "dkrasiev"; description = "Dmitry Krasiev"; }, modules ? [] }: nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit hostname; };
+      specialArgs = { inherit hostname user; };
       modules = [
         ./systems/${profile}/configuration.nix
 

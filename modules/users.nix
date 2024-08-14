@@ -1,9 +1,9 @@
+{ user, ... }:
+
 {
-  users.users = {
-    dkrasiev = {
-      isNormalUser = true;
-      description = "Dmitry Krasiev";
-      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
-    };
+  users.users.${user.name} = {
+    isNormalUser = true;
+    description = user.description;
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
   };
 }
