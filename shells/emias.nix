@@ -10,7 +10,7 @@ let
   pkgs-20-09 = import nixpkgs-20-09 { inherit system; };
 in
 pkgs.mkShell {
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     jdk8
     maven
     pkgs-20-09.nodejs-14_x
