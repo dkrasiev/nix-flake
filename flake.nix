@@ -3,46 +3,47 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+
     vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
-  outputs = { nixpkgs, ... }@inputs:
-  let
-    system = "x86_64-linux";
+  outputs = { self, nixpkgs, vscode-server }:
+    let
+      system = "x86_64-linux";
 
-    pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs { inherit system; };
 
-    mkSystem = { profile, hostname ? profile, user ? { name = "dkrasiev"; description = "Dmitry Krasiev"; }, modules ? [] }: nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = { inherit hostname user; };
-      modules = [
-        ./systems/${profile}/configuration.nix
+      mkSystem = profile:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            hostname = profile;
+            user = {
+              name = "dkrasiev";
+              description = "Dmitry Krasiev";
+            };
+          };
+          modules = [
+            ./systems/${profile}/configuration.nix
 
-        inputs.vscode-server.nixosModules.default
-        ({ config, pkgs, ... }: {
-            services.vscode-server.enable = true;
-        })
-      ] ++ modules;
-    };
-    
-    mkShell = { profile, inputs }: import ./shells/${profile}.nix inputs;
-  in
-  {
-    nixosConfigurations = {
-      matebook = mkSystem { profile = "matebook"; };
-      b550mpro = mkSystem { profile = "b550mpro"; };
-      nixos-work = mkSystem { profile = "nixos-work"; };
-    };
+            vscode-server.nixosModules.default
+            ({ config, pkgs, ... }: { services.vscode-server.enable = true; })
+          ];
+        };
 
-    devShells.${system} = {
-      emias = mkShell {
-        profile = "emias";
-        inputs = { inherit pkgs system; };
+      mkShell = profile:
+        import ./shells/${profile}.nix { inherit pkgs system; };
+
+    in {
+      nixosConfigurations = {
+        matebook = mkSystem "matebook";
+        b550mpro = mkSystem "b550mpro";
+        nixos-work = mkSystem "nixos-work";
       };
-      prisma = mkShell {
-        profile = "prisma";
-        inputs = { inherit pkgs system; };
+
+      devShells.${system} = {
+        emias = mkShell "emias";
+        prisma = mkShell "prisma";
       };
     };
-  };
 }
