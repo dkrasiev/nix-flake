@@ -26,7 +26,7 @@
     stow
     qbittorrent
     obs-studio easyeffects
-    gnome.gnome-boxes
+    gnome-boxes
 
     ### CLI UTILS
     # archives
