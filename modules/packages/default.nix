@@ -5,6 +5,7 @@
 
   imports = [
     ./modules/dev.nix
+    ./modules/fonts.nix
     # ./modules/k8s.nix
   ];
 
@@ -27,6 +28,7 @@
     qbittorrent
     obs-studio easyeffects
     gnome-boxes
+    kdePackages.kcolorpicker epick gpick
 
     ### CLI UTILS
     # archives

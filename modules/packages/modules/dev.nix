@@ -21,7 +21,7 @@
     maven jre
 
     # terminal
-    kitty nerdfonts
+    kitty
 
     # tmux
     tmux tmuxinator
