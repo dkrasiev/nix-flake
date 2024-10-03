@@ -22,13 +22,13 @@
     thunderbird
     telegram-desktop
     gimp
-    kdenlive
+    # kdenlive
     obsidian
     stow
     qbittorrent
     obs-studio easyeffects
-    gnome-boxes
-    kdePackages.kcolorpicker epick gpick
+    # gnome-boxes
+    # kdePackages.kcolorpicker epick gpick
 
     ### CLI UTILS
     # archives
@@ -39,5 +39,7 @@
     nh nurl
     # search
     ripgrep fzf zoxide
+    # videos
+    ffmpeg
   ];
 }

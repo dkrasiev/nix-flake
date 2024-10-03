@@ -6,19 +6,16 @@
     git lazygit gh
 
     # compilers
-    gnumake cmake gcc rustc
+    gnumake cmake gcc
+
+    # rust
+    rustc cargo
 
     # package managers / languages
-    # rust
-    cargo
-    # lua
     luarocks
-    # javascript
     nodejs
-    # python
     python3
-    # java
-    maven jre
+    # maven jre
 
     # terminal
     kitty
@@ -33,11 +30,11 @@
     zsh oh-my-posh
 
     # gui stuff
-    postman
-    insomnia
-    dbeaver-bin
-    burpsuite
-    soapui
-    charles
+    # postman
+    # insomnia
+    # dbeaver-bin
+    # burpsuite
+    # soapui
+    # charles
   ];
 }
