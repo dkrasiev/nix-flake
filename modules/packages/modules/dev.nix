@@ -25,6 +25,7 @@
 
     # editors
     neovim vscode
+    jetbrains.idea-community-bin
 
     # shell
     zsh oh-my-posh
