@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-stable, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -15,13 +15,14 @@
     luarocks
     nodejs
     python3
-    # maven jre
+    maven ant
 
     # terminal
     kitty
 
     # tmux
-    tmux tmuxinator
+    pkgs-stable.tmux
+    pkgs-stable.tmuxinator
 
     # editors
     neovim vscode
@@ -35,7 +36,7 @@
     # insomnia
     # dbeaver-bin
     # burpsuite
-    # soapui
+    soapui
     # charles
   ];
 }
