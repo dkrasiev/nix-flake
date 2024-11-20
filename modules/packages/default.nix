@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     # disk management
-    filelight partition-manager
+    filelight partition-manager gparted
     # media
     mpv
     # office suite
@@ -22,7 +22,7 @@
     thunderbird
     telegram-desktop
     gimp
-    # kdenlive
+    kdenlive
     obsidian
     stow
     qbittorrent

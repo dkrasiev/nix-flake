@@ -1,40 +1,41 @@
-{ pkgs, pkgs-stable, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    # git stuff
-    git lazygit gh
-
-    # compilers
+    ### package managers / languages
+    # C
     gnumake cmake gcc
-
-    # rust
+    # Lua
+    luarocks
+    # JavaScript
+    nodejs
+    # Python
+    python3
+    # Java
+    maven ant
+    # Rust
     rustc cargo
 
-    # package managers / languages
-    luarocks
-    nodejs
-    python3
-    maven ant
-
-    # terminal
+    ### terminal
     kitty
 
-    # tmux
-    pkgs-stable.tmux
-    pkgs-stable.tmuxinator
+    ### tmux
+    tmux tmuxinator
 
-    # editors
+    ### editors
     neovim vscode
     jetbrains.idea-community-bin
 
-    # shell
+    ### shell/cli
     zsh oh-my-posh
+    # git
+    git lazygit gh
 
-    # gui stuff
-    # postman
+    ### other gui apps
+    # http clients
+    postman bruno
     # insomnia
-    # dbeaver-bin
+    dbeaver-bin
     # burpsuite
     soapui
     # charles

@@ -3,21 +3,19 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable }:
+  outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
 
       pkgs = import nixpkgs { inherit system; };
-      pkgs-stable = import nixpkgs-stable { inherit system; };
 
       mkSystem = profile:
         nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
-            inherit pkgs-stable;
             hostname = profile;
             user = {
               name = "dkrasiev";
@@ -30,7 +28,7 @@
         };
 
       mkShell = profile:
-        import ./shells/${profile}.nix { inherit pkgs pkgs-stable system; };
+        import ./shells/${profile}.nix { inherit pkgs system; };
 
     in {
       nixosConfigurations = {
