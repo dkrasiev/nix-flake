@@ -25,7 +25,7 @@
     kdenlive
     obsidian
     stow
-    qbittorrent
+    # qbittorrent
     obs-studio easyeffects
     # gnome-boxes
     # kdePackages.kcolorpicker epick gpick
