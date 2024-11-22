@@ -2,20 +2,22 @@
   description = "dkrasiev's flake";
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, nixpkgs-unstable }:
     let
       system = "x86_64-linux";
 
       pkgs = import nixpkgs { inherit system; };
+      pkgs-unstable = import nixpkgs-unstable { inherit system; };
 
       mkSystem = profile:
         nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
+            inherit pkgs-unstable;
             hostname = profile;
             user = {
               name = "dkrasiev";
@@ -28,7 +30,7 @@
         };
 
       mkShell = profile:
-        import ./shells/${profile}.nix { inherit pkgs system; };
+        import ./shells/${profile}.nix { inherit pkgs pkgs-unstable system; };
 
     in {
       nixosConfigurations = {

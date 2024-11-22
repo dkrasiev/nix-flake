@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -23,7 +23,7 @@
     tmux tmuxinator
 
     ### editors
-    neovim vscode
+    pkgs-unstable.neovim vscode
     jetbrains.idea-community-bin
 
     ### shell/cli
