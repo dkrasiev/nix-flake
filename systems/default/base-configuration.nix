@@ -1,5 +1,6 @@
 {
   imports = [
+    ../../modules/networking
     ../../modules/packages
     ../../modules/programs
     ../../modules/services
@@ -7,7 +8,6 @@
 
     ../../modules/bluetooth.nix
     ../../modules/bootloader.nix
-    ../../modules/networking.nix
     ../../modules/nix.nix
     ../../modules/polkit.nix
     ../../modules/sound.nix
