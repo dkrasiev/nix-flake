@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -44,5 +44,10 @@
     ripgrep fzf zoxide
     # videos
     ffmpeg
+
+    # vpn
+    wireguard-tools
+    pkgs-unstable.amneziawg-tools
+    pkgs-unstable.amneziawg-go
   ];
 }
