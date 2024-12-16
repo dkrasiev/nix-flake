@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     # disk management
-    filelight partition-manager gparted
+    filelight partition-manager gparted kdiskmark gsmartcontrol
     # media
     mpv
     # office suite
