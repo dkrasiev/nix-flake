@@ -3,12 +3,6 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  imports = [
-    ./modules/dev.nix
-    ./modules/fonts.nix
-    # ./modules/k8s.nix
-  ];
-
   environment.systemPackages = with pkgs; [
     # disk management
     filelight partition-manager gparted kdiskmark gsmartcontrol

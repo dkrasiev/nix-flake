@@ -25,6 +25,7 @@
     ### editors
     pkgs-unstable.neovim vscode
     # jetbrains.idea-community-bin
+    # jetbrains.webstorm
 
     ### shell/cli
     zsh oh-my-posh

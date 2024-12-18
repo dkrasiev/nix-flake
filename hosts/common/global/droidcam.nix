@@ -17,8 +17,7 @@
     kernelModules = [
       # Virtual camera.
       "v4l2loopback"
-      # Virtual microphone, built-in.
-#     "snd-aloop" <-- Not worried about getting this working right now.
+      # "snd-aloop" <-- Not worried about getting this working right now.
     ];
     # Set initial kernel module settings.
     extraModprobeConfig = ''

@@ -13,6 +13,8 @@
       pkgs = import nixpkgs { inherit system; };
       pkgs-unstable = import nixpkgs-unstable { inherit system; };
 
+      lib = nixpkgs.lib;
+
       mkSystem = profile:
         nixpkgs.lib.nixosSystem {
           inherit system;
@@ -34,14 +36,20 @@
 
     in {
       nixosConfigurations = {
-        matebook = mkSystem "matebook";
-        b550mpro = mkSystem "b550mpro";
-        nixos-work = mkSystem "nixos-work";
+        b550mpro = lib.nixosSystem {
+          modules = [./hosts/b550mpro];
+        };
       };
-
-      devShells.${system} = {
-        emias = mkShell "emias";
-        prisma = mkShell "prisma";
-      };
+     
+      # nixosConfigurations = {
+      #   matebook = mkSystem "matebook";
+      #   b550mpro = mkSystem "b550mpro";
+      #   nixos-work = mkSystem "nixos-work";
+      # };
+      #
+      # devShells.${system} = {
+      #   emias = mkShell "emias";
+      #   prisma = mkShell "prisma";
+      # };
     };
 }
